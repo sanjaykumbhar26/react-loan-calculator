@@ -1,0 +1,17 @@
+@mixin flexContainer($display: flex, $justifyContent: center, $alignItems: center, $gap: 20px) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+}
+
+@mixin backgroundImage( $size: cover, $positon: center, $repeat: no-repeat) {
+    background-size: $size;
+    background-position: $positon;
+    background-repeat: $repeat;
+}
+
+@mixin fontSize($minSize, $maxSize, $preferredSize, $color: var(--headingColor)) {
+    font-size: clamp($minSize, $preferredSize, $maxSize) !important;
+    color: $color;
+}
